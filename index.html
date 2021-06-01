@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap Css -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    
+    <title>To Do Siingle page application!</title>
+    <style>
+        *{
+            font-family: Poppins;
+        }
+        .task-list{
+            border-left: 3px solid #FFC107;
+        }
+        .task-list:hover{
+            box-shadow: 0px 5px 15px 4px #ccc !important;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="bg-primary text-light text-center p-4">
+        <h5>To do single page application</h5>
+    </header>
+
+    <!-- Main Area -->
+    <div style="height: 100%;" class="main-area bg-light pt-5 pb-5 pl-4 pr-4">
+
+        <section class="to-do-app-area">
+            <div class="container overflow-hidden">
+                <!-- Task count area -->
+                <div class="row mb-3">
+                    <div class="col">
+                        <div class="task-count-box  shadow bg-primary p-3 text-center rounded border text-light">
+                            <p class="m-0">Task</p>
+                            <p id="taskCounter" class="m-0">0</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="task-count-box  shadow bg-warning p-3 text-center rounded border">
+                            <p class="m-0">Do</p>
+                            <p id="taskDoCount" class="m-0">0</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="task-count-box  shadow bg-success text-light p-3 text-center rounded border">
+                            <p class="m-0">Done</p>
+                            <p id="taskCompletedCount" class="m-0">0</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- To do input form -->
+                <form id="toDoFormSumbit">
+                    <div class="row bg-white shadow py-5 px-4  rounded" style="margin:1px">
+                        <h6 class="w-100">Start your day now !</h6>
+                        <div class="col-10 p-0">
+                            <input required id="taskName" name="taskName" class="rounded-0 form-control" type="text">
+                        </div>
+                        <div class="col-2 p-0">
+                            <button class="rounded-0 form-control btn btn-primary" type="submit"><i class="fa fa-plus"></i></button>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- To do list area -->
+                <div class="row">
+                    <div class="col">
+                        <div id="taskListArea">
+
+                            <div class="task-list bg-white shadow pt-4 px-3 pb-2  rounded overflow-hidden my-3">
+                                <i class="fa fa-check badge badge-warning mb-2 text-light"><span class="ml-2">Do</span></i>
+                                <h6 class="m-0"><strong>1.</strong> Lorem ipsum dolor sit amet consectetur. </h6>
+                                <p class="m-0 float-right mt-2">
+                                    <i  class="fa fa-trash btn btn-danger btn-sm"></i>
+                                    <i class="fa fa-check-square-o btn btn-success btn-sm"></i>
+                                </p>
+                            </div>
+
+                            <div class="task-list bg-white shadow pt-4 px-3 pb-2  rounded overflow-hidden my-3">
+                                <i class="fa fa-check badge badge-warning mb-2 text-light"><span class="ml-2">Do</span></i>
+                                <h6 class="m-0"><strong>1.</strong> Lorem ipsum dolor sit amet consectetur. </h6>
+                                <p class="m-0 float-right mt-2">
+                                    <i  class="fa fa-trash btn btn-danger btn-sm"></i>
+                                    <i class="fa fa-check-square-o btn btn-success btn-sm"></i>
+                                </p>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Bootstrap js -->
+    <script src="assets/bootstrap/js/jquery-3.4.1.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/bootstrap/js/popper.min.js"></script>
+
+    <!-- Our custom Main Js -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
