@@ -33,6 +33,17 @@ function completeTask(id) {
     }
 }
 
+// Delete task function
+function deleteTask(id) {
+    if (id) {
+        const getTask = JSON.parse(localStorage.getItem('amarTask'));
+        const remainTask = getTask.filter(task => task.id !== id);
+        
+        localStorage.setItem('amarTask', JSON.stringify(remainTask));
+        showAllTask();
+    }
+}
+
 // Show all task function
 function showAllTask() {
     const taskListArea = document.getElementById('taskListArea');
@@ -67,7 +78,7 @@ function showAllTask() {
                     <i class="fa fa-${badgeIcon} badge badge-${badgeBg} mb-2 text-light"><span class="ml-2">${task.status}</span></i>
                     <h6 class="m-0"><strong>${indexCounter++}.</strong> ${task.taskName} </h6>
                     <p class="m-0 float-right mt-2">
-                        <i  class="fa fa-trash btn btn-danger btn-sm"></i>
+                        <i onClick="deleteTask('${task.id}')" class="fa fa-trash btn btn-danger btn-sm"></i>
                         <i onClick="completeTask('${task.id}')" class="fa fa-check-square-o btn btn-success btn-sm"></i>
                     </p>
                 </div>
